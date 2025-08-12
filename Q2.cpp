@@ -1,3 +1,8 @@
+/*
+Q2: Design the logic to remove the duplicate elements from an array.
+After the deletion, the array should contain only unique elements.
+*/
+
 #include <iostream>
 #include <unordered_set>
 using namespace std;
