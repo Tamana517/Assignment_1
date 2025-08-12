@@ -1,3 +1,8 @@
+/*
+Q5: Write a program to find the sum of every row and every column
+in a two-dimensional array.
+*/
+
 #include <iostream>
 using namespace std;
 
