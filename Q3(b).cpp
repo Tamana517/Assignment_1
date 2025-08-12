@@ -1,3 +1,8 @@
+/*
+Q3(b): Given an array of n-1 distinct integers in the range of 1 to n,
+find the missing number in it in a sorted array using Binary Search.
+*/
+
 #include <iostream>
 using namespace std;
 
