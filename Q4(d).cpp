@@ -1,3 +1,7 @@
+/*
+Q4(d): Write a program to sort the strings in alphabetical order.
+*/
+
 #include <iostream>
 using namespace std;
 
