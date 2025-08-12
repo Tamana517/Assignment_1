@@ -4,37 +4,40 @@ After the deletion, the array should contain only unique elements.
 */
 
 #include <iostream>
-#include <unordered_set>
 using namespace std;
 
 int removeDuplicates(int arr[], int n) {
-    if (n == 0) return 0;   // Handle empty array
-    
-    unordered_set<int> seen; // Track seen elements
-    int unique = 0;         // Index for unique elements
-    
+    if (n == 0) return 0; // Empty array case
+
     for (int i = 0; i < n; i++) {
-        if (seen.find(arr[i]) == seen.end()) {  // If not seen
-            seen.insert(arr[i]);                // Mark as seen
-            arr[unique++] = arr[i];            // Store in array
+        for (int j = i + 1; j < n; ) {
+            if (arr[i] == arr[j]) {
+                // Shift elements to the left
+                for (int k = j; k < n - 1; k++) {
+                    arr[k] = arr[k + 1];
+                }
+                n--; // Reduce array size
+            } else {
+                j++; // Move to next element only if no deletion
+            }
         }
     }
-    return unique;  // Return new size
+    return n; // New size after removing duplicates
 }
 
 int main() {
     int arr[] = {1, 2, 2, 3, 4, 4, 4, 5};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    
+    int n = sizeof(arr) / sizeof(arr[0]);
+
     cout << "Original array: ";
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
-    
-    n = removeDuplicates(arr, n);  // Remove duplicates
-    
+
+    n = removeDuplicates(arr, n); // Remove duplicates
+
     cout << "\nUnique elements: ";
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
-    
+
     return 0;
 }
