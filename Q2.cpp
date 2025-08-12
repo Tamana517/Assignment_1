@@ -29,12 +29,14 @@ int main() {
     int arr[] = {1, 2, 2, 3, 4, 4, 4, 5};
     int n = sizeof(arr) / sizeof(arr[0]);
 
+     // Print original array
     cout << "Original array: ";
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 
     n = removeDuplicates(arr, n); // Remove duplicates
 
+    // Print array after removal
     cout << "\nUnique elements: ";
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
