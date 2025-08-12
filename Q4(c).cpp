@@ -1,3 +1,7 @@
+/*
+Q4(c): Write a program to delete all the vowels from the string.
+*/
+
 #include <iostream>
 using namespace std;
 
