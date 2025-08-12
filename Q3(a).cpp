@@ -1,3 +1,8 @@
+/*
+Q3(a): Given an array of n-1 distinct integers in the range of 1 to n,
+find the missing number in it in a sorted array using Linear time.
+*/
+
 #include <iostream>
 using namespace std;
 
