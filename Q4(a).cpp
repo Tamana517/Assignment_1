@@ -1,3 +1,7 @@
+/*
+Q4(a): Implement the logic to reverse the elements of an array.
+*/
+
 #include <iostream>
 using namespace std;
 
