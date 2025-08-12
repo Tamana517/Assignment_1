@@ -36,7 +36,7 @@ int main() {
 
     n = removeDuplicates(arr, n); // Remove duplicates
 
-    // Print array after removal
+    // Print array after duplicates removal
     cout << "\nUnique elements: ";
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
