@@ -1,3 +1,7 @@
+/*
+Q4(b): Implement the logic to find the matrix multiplication.
+*/
+
 #include <iostream>
 using namespace std;
 
