@@ -1,3 +1,7 @@
+/*
+Q4(c): Implement the logic to find the transpose of a matrix.
+*/
+
 #include <iostream>
 using namespace std;
 
