@@ -1,3 +1,7 @@
+/*
+Q4(b): Write a program to reverse a string.
+*/
+
 #include <iostream>
 using namespace std;
 
