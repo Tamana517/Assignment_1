@@ -1,3 +1,7 @@
+/*
+Q4(a): Write a program to concatenate one string to another string.
+*/
+
 #include <iostream>
 using namespace std;
 
