@@ -1,4 +1,4 @@
-/* Assuming array is used to store elements of the following matrices,
+/* Q5: Assuming array is used to store elements of the following matrices,
  implement an efficient way that reduces the space requirement.
  (a) Diagonal Matrix.*/
 
