@@ -1,3 +1,9 @@
+/*
+Q5: Assuming array is used to store elements of the following matrices,
+implement an efficient way that reduces the space requirement.
+(d) Upper Triangular Matrix.
+*/
+
 #include <iostream>
 using namespace std;
 
