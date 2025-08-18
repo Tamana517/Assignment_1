@@ -1,3 +1,9 @@
+/*
+Q6: Write a program to implement the following operations on a Sparse Matrix,
+assuming the matrix is represented using a triplet.
+(a) Transpose of a matrix.
+*/
+
 #include <iostream>
 using namespace std;
 
