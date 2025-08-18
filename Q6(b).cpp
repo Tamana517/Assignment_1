@@ -13,7 +13,7 @@ void addSparse(int A[][3], int B[][3], int result[][3]) {
             result[k][0] = A[i][0], result[k][1] = A[i][1], result[k++][2] = A[i++][2];
         else if (B[j][0] < A[i][0] || (B[j][0] == A[i][0] && B[j][1] < A[i][1]))
             result[k][0] = B[j][0], result[k][1] = B[j][1], result[k++][2] = B[j++][2];
-        else { // same position → add values
+        else { // same position -> add values
             int sum = A[i][2] + B[j][2];
             if (sum != 0)
                 result[k][0] = A[i][0], result[k][1] = A[i][1], result[k++][2] = sum;
