@@ -41,15 +41,18 @@ void duplicateTwos(int arr[], int n) {
 }
 
 int main() {
-    int arr[] = {1, 2, 3, 2, 4, 5, 2, 0};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    cout << "Enter size of array: ";
+    cin >> n;
+
+    int arr[n];
+    cout << "Enter elements of array: ";
+    for (int i = 0; i < n; i++) cin >> arr[i];
 
     duplicateTwos(arr, n);
 
-    // print result
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
-
+    cout << "Modified array: ";
+    for (int i = 0; i < n; i++) cout << arr[i] << " ";
+    
     return 0;
 }
