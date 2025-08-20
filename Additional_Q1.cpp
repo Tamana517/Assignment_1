@@ -4,10 +4,13 @@ integer k, the task is to count all pairs (i, j) such that i < j and absolute va
 is equal to k.
 */
 
+//Time Complexity: O(n^2)
+//Space Complexity: O(1)
+
 #include <iostream>
 using namespace std;
 
-// insertion sort
+// Insertion sort
 void insertionSort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
         int key = arr[i], j = i - 1;
@@ -19,25 +22,43 @@ void insertionSort(int arr[], int n) {
     }
 }
 
-// count pairs with difference = k
+// Count pairs with difference = k (handles duplicates)
 int countPairsWithDiffK(int arr[], int n, int k) {
     insertionSort(arr, n);
-    int i = 0, j = 1, cnt = 0;
-    while (i < n && j < n) {
-        int diff = arr[j] - arr[i];
-        if (i != j && diff == k) { cnt++; i++; j++; } // found pair
-        else if (diff > k) i++;  // move left
-        else j++;                // move right
+
+    int i = 0, j = 0, cnt = 0;
+    while (j < n) {
+        if (arr[j] - arr[i] < k) j++;       // increase diff
+        else if (arr[j] - arr[i] > k) i++;  // decrease diff
+        else {
+            int ele1 = arr[i], ele2 = arr[j];
+            int cnt1 = 0, cnt2 = 0;
+
+            // count frequency of duplicates
+            while (j < n && arr[j] == ele2) { j++; cnt2++; }
+            while (i < n && arr[i] == ele1) { i++; cnt1++; }
+
+            if (ele1 == ele2) 
+                cnt += (cnt1 * (cnt1 - 1)) / 2; // same elements
+            else 
+                cnt += cnt1 * cnt2;             // different elements
+        }
     }
     return cnt;
 }
 
 int main() {
     int n, k;
-    cin >> n;                     // size
+    cout << "Enter size of array: ";
+    cin >> n;
+
     int arr[n];
+    cout << "Enter elements: ";
     for (int i = 0; i < n; i++) cin >> arr[i];
-    cin >> k;                     // target diff
-    cout << countPairsWithDiffK(arr, n, k);
+
+    cout << "Enter target difference k: ";
+    cin >> k;
+
+    cout << "Total pairs = " << countPairsWithDiffK(arr, n, k) << endl;
     return 0;
 }
