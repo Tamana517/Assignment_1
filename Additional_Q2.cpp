@@ -21,9 +21,9 @@ bool canSplit(string s) {
         freq[c - 'a']++;
     }
 
-    // check if any char appears 3 or more times
+    // check if any char appears 2 or more times
     for (int i = 0; i < 26; i++) {
-        if (freq[i] >= 3) return true;
+        if (freq[i] >= 2) return true;
     }
 
     return false;  // not possible
